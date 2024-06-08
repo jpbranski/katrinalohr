@@ -221,6 +221,21 @@ header
             font-size: 1rem;
         }
     }
+
+    a:link,
+    a:visited
+    {
+        text-decoration: none;
+        color: var(--warm-black);
+        transition: transform .3s ease-in-out;
+    }
+
+    a:hover,
+    a:active,
+    a:focus
+    {
+        transform: scale(1.2);
+    }
 }
 
 footer
