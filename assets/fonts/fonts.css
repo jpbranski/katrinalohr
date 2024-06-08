@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'sofiaregular';
+    src:    url('./sofia-regular-webfont.woff2') format('woff2'),
+            url('./sofia-regular-webfont.woff') format('woff'),
+            url("./Sofia-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Serif 4';
+    src:    url('./SourceSerif4-VariableFont_opsz,wght.woff'),
+            url('./SourceSerif4-VariableFont_opsz,wght.woff2'),
+            url('./SourceSerif4-VariableFont_opsz,wght.ttf'),
+            url('./SourceSerif4-Italic-VariableFont_opsz,wght.ttf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(./MaterialSymbolsOutlined[FILL,GRAD,opsz,wght].woff2) format('woff2'),
+    url(./MaterialSymbolsOutlined[FILL,GRAD,opsz,wght].ttf) format('truetype');
+}
