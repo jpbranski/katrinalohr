@@ -9,7 +9,9 @@
     --brown: #593114;
     --brown-rgb: 89, 49, 20;
     --green: #2e4f1c;
-    --green-rgb: 46, 79, 28
+    --green-rgb: 46, 79, 28;
+
+    --box-shadow: 3px 3px 5px rgba(var(--warm-black-rgb), .15);
 }
 
 *
@@ -175,6 +177,7 @@ header
             gap: 16px;
             font-size: 1.2rem;
             border-radius: 4px;
+            box-shadow: var(--box-shadow);
         }
 
         a:link,
@@ -213,7 +216,8 @@ header
         text-align: center;
         font-size: 1.2rem;
         background-color: rgba(var(--green-rgb), 0.1);
-        box-shadow: 3px 3px 5px rgba(var(--warm-black-rgb), .1);
+        box-shadow: var(--box-shadow);
+        border-radius: 4px;
         transition: background-color .3s ease-in-out;
 
         &:hover
@@ -223,6 +227,8 @@ header
 
         img
         {
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
             width: 100%;
         }
 
@@ -233,13 +239,14 @@ header
             align-items: center;
             gap: 8px;
             font-size: 1rem;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
         }
     }
 
     a:link,
     a:visited
     {
-        display: inline-block;
         width: 100%;
         text-decoration: none;
         color: var(--warm-black);
@@ -251,6 +258,42 @@ header
     a:focus
     {
         transform: scale(1.2);
+    }
+}
+
+.file-grid
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 240px);
+    grid-gap: 24px;
+
+    @media screen and (max-width: 480px)
+    {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    }
+
+    a,
+    a:link,
+    a:visited
+    {
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        padding: 12px 0;
+        color: var(--warm-white);
+        background-color: rgba(var(--brown-rgb), .8);
+        border-radius: 4px;
+        box-shadow: var(--box-shadow);
+        transition: background-color .3s ease-in-out;
+    }
+
+    a:hover,
+    a:active,
+    a:focus
+    {
+        background-color: rgba(var(--brown-rgb), .65);
     }
 }
 
